@@ -1,4 +1,4 @@
-# File from obeDet.py
+# File dari obeDet.py
 import numpy as np
 
 swap = 0
@@ -17,15 +17,15 @@ def gaussStep(matrix2):
     global swap   
 
     n = len(matrix2)
-    A = [row[:] for row in matrix2]   # copy matrix
+    A = [row[:] for row in matrix2]   # salin matriks
     step = 1
 
-    print("Elimination process using ERO:\n")
+    print("Proses eliminasi menggunakan OBE:\n")
 
     for i in range(n - 1):
         pivot = A[i][i]
 
-        # pivot nol maka tukar baris
+        # jika pivot nol, tukar baris
         if pivot == 0:
             for k in range(i + 1, n):
                 if A[k][i] != 0:
@@ -65,9 +65,8 @@ def showStep2(matrix2):
     printMatrix(matrix2)
 
     if row != col:
-        print(f"So sorry, there's no valid determinant of A {row} x {col}")
-        print("Please input determinant with order of n x n")
-        print()
+        print(f"Maaf, determinan tidak berlaku untuk matriks {row} x {col}")
+        print("Silakan masukkan matriks persegi (n x n) untuk menghitung determinan.\n")
     else:
         print(f"Operasi OBE untuk matriks A {row}x{col}:\n")
         matrix2 = gaussStep(matrix2)
@@ -79,9 +78,9 @@ def showStep2(matrix2):
             det *= matrix2[i][i]
 
         swapSign = pow(-1, swap)
-        print("Determinant is:", " * ".join(diag))
-        print(f"Determinant result: {swapSign * det:.2f}, because we swap {swap} row(s)")
-        print()
+        print("Perhitungan determinan:", " * ".join(diag))
+        print(f"Hasil determinan: {swapSign * det:.2f}, karena ada {swap} kali pertukaran baris\n")
+
 
 A1 = [
     [2, 1, -1, 8],
@@ -107,12 +106,11 @@ C = [
     [5, 3]
 ]
 
-# undefine determinant handling
-
+# Matriks tidak persegi
 D = [
     [1, 3, 2],
     [4, 6, 5]
 ]
 
-print("\n=== Determinant with Gauss-Jordan ERO ===\n")
+print("\n=== Determinan dengan Gauss-Jordan OBE ===\n")
 showStep2(D)
