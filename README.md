@@ -82,6 +82,6 @@ for example. The result should be similar to Jupyter Notebook.
 ##### Author: [Ahmad Fakhrul Bawani](https://github.com/ahmadfakhrulbawani2-arch)  
 
 <p align="right">
-  <img src="https://img.shields.io/github/last-commit/ahmadfakhrulbawani2-arch/CodeForces-All-Problems?style=for-the-badge&color=brightgreen" alt="Last Commit">
+  <img src="https://img.shields.io/github/last-commit/ahmadfakhrulbawani2-arch/Final-Project-Linear-Algebra-Matrix-1?style=for-the-badge&color=brightgreen" alt="Last Commit">
 </p>
 
