@@ -1,4 +1,4 @@
-# from obeSpl.py
+# file dari obeSpl.py
 
 import numpy as np
 
@@ -14,31 +14,31 @@ def printMatrix(M):
 
 def gaussStep(matrix3):
     n = len(matrix3)
-    A = [row[:] for row in matrix3]   # copy matrix
+    A = [row[:] for row in matrix3]   # salin matriks
     step = 1
 
-    print("Process of Gauss-Jordan Elimination:\n")
+    print("Proses Eliminasi Gauss-Jordan:\n")
     
     for i in range(n):
         pivot = A[i][i]
 
-        # Jika pivot = 0 maka cari baris lain
+        # Jika pivot = 0, cari baris lain untuk swap
         if pivot == 0:
             for k in range(i+1, n):
                 if A[k][i] != 0:
-                    print(f"Iteration-{step}: Swapping R{i+1} <-> R{k+1}")
+                    print(f"Iterasi-{step}: Tukar R{i+1} <-> R{k+1}")
                     A[i], A[k] = A[k], A[i]
                     printMatrix(A)
                     step += 1
                     pivot = A[i][i]
                     break
 
-        # Jika tetap 0 maka tidak bisa ditentukan
+        # Jika tetap 0 maka lanjut (tidak bisa normalisasi)
         if pivot == 0:
             continue
 
-        # Normalisasi pivot: yaitu jadikan 1 utama
-        print(f"Iteration-{step}: Normalizing R{i+1} (divide by {pivot:.2f})")
+        # Normalisasi pivot: jadikan 1
+        print(f"Iterasi-{step}: Normalisasi R{i+1} (bagi {pivot:.2f})")
         for c in range(len(A[0])):
             A[i][c] /= pivot
         printMatrix(A)
@@ -52,7 +52,7 @@ def gaussStep(matrix3):
                 continue
 
             factor = A[r][i]
-            print(f"Iteration-{step}: R{r+1} = R{r+1} - ({factor:.2f}) * R{i+1}")
+            print(f"Iterasi-{step}: R{r+1} = R{r+1} - ({factor:.2f}) * R{i+1}")
 
             for c in range(len(A[0])):
                 A[r][c] -= factor * A[i][c]
@@ -60,7 +60,7 @@ def gaussStep(matrix3):
             printMatrix(A)
             step += 1
 
-    print("Final Diagonal Matrix Form:")
+    print("Matriks diagonal akhir:")
     printMatrix(A)
 
     return A
@@ -89,28 +89,28 @@ def showSol(matrix3):
     col = len(matrix3[0])
 
     if row < col - 1:
-        print("Not enough equations to determine a unique solution.\n")
+        print("Jumlah persamaan tidak cukup untuk solusi unik.\n")
         return
     
-    print("The matrix is:\n")
+    print("Matriksnya adalah:\n")
     printMatrix(matrix3)
-    print("Solution:\n")
+    print("Solusi:\n")
 
     finalM = gaussStep(matrix3)
     sol, status = solveFromDiagonal(finalM)
 
-    print("So the solution is:\n")
+    print("Maka solusinya adalah:\n")
 
     if status == "nosolution":
-        print("No solution (inconsistent equations)")
+        print("Tidak ada solusi (persamaan tidak konsisten)")
     elif status == "infinite":
-        print("Infinite solutions (underdetermined system)")
+        print("Solusi tak hingga (sistem kurang determinan)")
     else:
         for i, val in enumerate(sol):
             print(f"x{i+1} = {val:.4f}")
 
 
-# function calls
+# Pemanggilan fungsi
 
 A1 = [
     [2, 1, -1, 8],
@@ -136,12 +136,11 @@ C = [
     [5, 3]
 ]
 
-# undefine determinant handling
-
+# Matriks tidak persegi / tidak lengkap
 D = [
     [1, 3, 2],
     [4, 6, 5]
 ]
 
-print("\n=== Solving Linear Equations using Gauss-Jordan ERO ===\n")
+print("\n=== Penyelesaian SPL dengan Gauss-Jordan OBE ===\n")
 showSol(A1)
