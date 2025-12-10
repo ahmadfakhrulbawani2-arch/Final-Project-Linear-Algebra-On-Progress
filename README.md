@@ -1,9 +1,9 @@
 # Linear Algebra Final Project?
 <div style="display: flex; flex-wrap: wrap; gap: 8px;">
 
-<img src="https://img.shields.io/github/repo-size/ahmadfakhrulbawani2-arch/CodeForces-All-Problems?style=for-the-badge&color=orange">
-<img src="https://img.shields.io/github/stars/ahmadfakhrulbawani2-arch/CodeForces-All-Problems?style=for-the-badge&color=yellow">
-<img src="https://img.shields.io/github/forks/ahmadfakhrulbawani2-arch/CodeForces-All-Problems?style=for-the-badge&color=purple">
+<img src="https://img.shields.io/github/repo-size/ahmadfakhrulbawani2-arch/Final-Project-Linear-Algebra-Matrix-1?style=for-the-badge&color=orange">
+<img src="https://img.shields.io/github/stars/ahmadfakhrulbawani2-arch/Final-Project-Linear-Algebra-Matrix-1?style=for-the-badge&color=yellow">
+<img src="https://img.shields.io/github/forks/ahmadfakhrulbawani2-arch/Final-Project-Linear-Algebra-Matrix-1?style=for-the-badge&color=purple">
 
 <img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white&style=for-the-badge">
 <img src="https://img.shields.io/badge/Jupyter-F37626?logo=jupyter&logoColor=white&style=for-the-badge">
@@ -84,4 +84,5 @@ for example. The result should be similar to Jupyter Notebook.
 <p align="right">
   <img src="https://img.shields.io/github/last-commit/ahmadfakhrulbawani2-arch/Final-Project-Linear-Algebra-Matrix-1?style=for-the-badge&color=brightgreen" alt="Last Commit">
 </p>
+
 
