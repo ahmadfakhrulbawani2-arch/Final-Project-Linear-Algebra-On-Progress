@@ -7,7 +7,7 @@ def invalidInputMessageDeterminan(r, c):
 def tampilkanMatrix(matrix):
     for row in matrix:
         atur = ["{:.2f}".format(x) for x in row]
-        print("     [" + ", ".join(atur) + "]")
+        print("    [" + ", ".join(atur) + "]")
 
 
 # spesific function

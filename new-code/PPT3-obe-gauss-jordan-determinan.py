@@ -1,4 +1,8 @@
 import numpy as np
+'''
+numpy yang sudah / akan digunakan:
+1. np.linalg.det()
+'''
 
 # Helper function
 def hitungDet(matrix):
