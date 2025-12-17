@@ -51,7 +51,7 @@ def iterateGaussJordan(matrix):
         if pivot != 1:
             print(f"Iterasi ke-{step}: Normalisasi baris ke-{j+1} / ({pivot:.2f})")
             print()
-            for c in range(row): # loop tiap kolom di baris ke j (karena pivot di M[j][j])
+            for c in range(col): # loop tiap kolom di baris ke j (karena pivot di M[j][j])
                 M[j][c] /= pivot
             tampilkanMatrix(M)
             print()
